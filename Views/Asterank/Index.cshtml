@@ -1,0 +1,131 @@
+﻿@model IEnumerable<AdministrativeManagementSystemWeb.Models.skymorph>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.center_dec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.center_ra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.key)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obs_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.offset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pixel_loc_x)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pixel_loc_y)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pos_err_ang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pos_err_major)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pos_err_minor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.predicted_dec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.predicted_ra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.triplet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.veloc_sn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.veloc_we)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.center_dec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.center_ra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.key)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obs_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.offset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pixel_loc_x)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pixel_loc_y)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pos_err_ang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pos_err_major)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pos_err_minor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.predicted_dec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.predicted_ra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.triplet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.veloc_sn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.veloc_we)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
